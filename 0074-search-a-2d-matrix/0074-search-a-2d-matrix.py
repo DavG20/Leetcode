@@ -2,7 +2,8 @@ class Solution:
     def searchMatrix(self, matrix: List[List[int]], target: int) -> bool:
                 
         for i in range(len(matrix)):
-            if self.BinarySearch(target,matrix[i]):
+            isTargetExist=self.BinarySearch(target,matrix[i])
+            if isTargetExist:
                 return True
         return False
     
