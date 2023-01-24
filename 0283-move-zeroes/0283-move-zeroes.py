@@ -3,25 +3,33 @@ class Solution:
         """
         Do not return anything, modify nums in-place instead.
         """
-        if nums==[] or len(nums)==1:
-            return nums
         
-        left = 0
+        placeholder = 0
+        seeker = 0
+        while seeker < len(nums):
+            if nums[seeker] != 0:
+                nums[placeholder],nums[seeker]=nums[seeker],nums[placeholder]
+                placeholder +=1
+            seeker+=1 
+#         if  len(nums)==1:
+#             return nums
         
-        seeker = 1
+#         left = 0
         
-        while seeker<len(nums) and left<seeker:
-            if nums[left]==0 and nums[seeker]!=0:
-                nums[left],nums[seeker]=nums[seeker],nums[left]
-                left += 1
-                seeker += 1
+#         seeker = 1
+        
+#         while seeker<len(nums) and left<seeker:
+#             if nums[left]==0 and nums[seeker]!=0:
+#                 nums[left],nums[seeker]=nums[seeker],nums[left]
+#                 left += 1
+#                 seeker += 1
                 
-            elif nums[left] == 0 and nums[seeker] == 0:
-                seeker += 1
+#             elif nums[left] == 0 and nums[seeker] == 0:
+#                 seeker += 1
                 
-            else:
-                left   += 1
-                seeker += 1
+#             else:
+#                 left   += 1
+#                 seeker += 1
         
                 
                 
