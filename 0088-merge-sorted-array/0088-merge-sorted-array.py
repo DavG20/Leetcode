@@ -7,9 +7,9 @@ class Solution(object):
         :type n: int
         :rtype: None Do not return anything, modify nums1 in-place instead.
         """
-        left=m-1
-        right=n-1
-        i=m+n-1
+        left = m-1
+        right = n-1
+        i = m+n-1
         
         while left>=0 and right>=0:
             if nums1[left]>nums2[right]:
