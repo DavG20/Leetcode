@@ -5,3 +5,4 @@ class Solution:
             answer=(answer+k)%i
         return answer+1
     
+        
