@@ -11,9 +11,10 @@ class Solution:
             if nums[i]==nums[i+1]:
                 nums[i]*=2
                 nums[i+1]=0
-                prev_zero_index=i+1
+                
         temp=-1   
         
+        #time complexity is not good in this case even if it passed
         # for i in range(len_nums):
         #     for j in range(i+1,len_nums):
         #         if nums[i]==0 and nums[j]!=0:
