@@ -10,8 +10,7 @@ class Solution:
         if r==len(mat) and c==len(mat[0]):
             
             return mat
-        # if r==1 or c==1:
-        #     return [original_elm]
+        
         if r * c == len(mat) * len(mat[0]):
             
             for i in range(r):
