@@ -7,11 +7,11 @@ class Solution:
         
         for i in range(len(arr)-1,-1,-1):
             
-            mod_arr.insert(0,max_)
+            mod_arr.append(max_)
             
             if arr[i] > max_:
                 
                 max_=arr[i]
-        return mod_arr
+        return mod_arr[::-1]
             
         
