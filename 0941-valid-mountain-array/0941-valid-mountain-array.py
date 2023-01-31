@@ -16,8 +16,7 @@ class Solution:
         while right - 1 > 0 and arr[right] < arr[right-1]:
             
             right -= 1
-        # if left==len(arr)-1:
-        #     return False
+       
         return left == right
             
             
