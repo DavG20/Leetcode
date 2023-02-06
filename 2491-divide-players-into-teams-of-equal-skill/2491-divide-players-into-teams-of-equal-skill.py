@@ -14,7 +14,6 @@ class Solution:
         
         
         while left < right :
-            print(left,right)
             
             if skill[left] + skill[right] == target :
                 
