@@ -4,12 +4,24 @@ class Solution(object):
         :type nums: List[int]
         :rtype: int
         """
-        res=[]
-        for num in nums:
-            if num not in res:
-                res.append(num)
-        for i in range(len(res)):
-            nums[i]=res[i]
-        nums=nums[:len(res)]
-        return len(nums)
+        left = 0 
         
+        right = 1
+        
+        count = 1
+        
+        while left < len(nums) and right < len(nums):
+            
+            if nums[left] ==  nums[right] :
+                right += 1
+            else:
+                count += 1
+                
+                nums[left+1],nums[right] = nums[right],nums[left+1]
+                
+                left += 1 
+            
+                right += 1
+                
+        return count
+                
